@@ -1,13 +1,13 @@
-/*process.env.MAIL_URL = 'smtp://your_username:your_password@smtp.sendgrid.net:587';
+process.env.MAIL_URL = 'smtp://soporte@elclubdelapelicula.com.ve:21361837@smtp.mailgun.org:25';
 
 import { Email } from 'meteor/email'
 
-// In your server code: define a method that the client can call
+// El codigo de tu servidor: define un metodo que es llamado en el cliente.
 Meteor.methods({
   sendEmail: function (to, from, subject, text) {
     check([to, from, subject, text], [String]);
-    // Let other method calls from the same client start running,
-    // without waiting for the email sending to complete.
+    // deja que otros metodos del cliente empiecen a correr,
+    // sin esperar a que el envío de correo electrónico para completar.
     this.unblock();
     Email.send({
       to: to,
@@ -18,11 +18,11 @@ Meteor.methods({
   }
 });
 
-// In your client code: asynchronously send an email
+// en el codigo cliente: asincrona enviar un correo electronico en este caso cada vez que inicia meteor envia un correo.
 Meteor.call('sendEmail',
-            'tiendadeportivanet@gmail.com',
-            'luisaguirre027@gmail.com, josedanielmelean@gmail.com, "jesuse.epg@gmail.com, maria_rr_13@hotmail.com',
-            'Hello from Meteor!',
-            'This is a test of Email.send.');
+            'luisaguirre027@gmail.com,josedanielmelean@gmail.com,jesuse.epg@gmail.com,maria_rr_13@hotmail.com',
+            'soporte@elclubdelapelicula.com.ve',
+            'Meteor Iniciado!',
+            'Correo Listo.' );
             
-console.log("sending...")//*/
+console.log("sending...");
