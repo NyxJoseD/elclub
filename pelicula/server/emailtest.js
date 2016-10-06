@@ -1,4 +1,4 @@
-/*process.env.MAIL_URL = 'smtp://your_username:your_password@smtp.sendgrid.net:587';
+process.env.MAIL_URL = 'smtp://soporte@elclubdelapelicula.com.ve:21361837@smtp.mailgun.org:25';
 
 import { Email } from 'meteor/email'
 
@@ -25,4 +25,4 @@ Meteor.call('sendEmail',
             'Hello from Meteor!',
             'This is a test of Email.send.');
             
-console.log("sending...")//*/
+console.log("sending...");
